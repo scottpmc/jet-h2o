@@ -6,6 +6,11 @@
 	<artifactId>jet-h2o</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<properties>
+		<maven.compiler.source>1.11</maven.compiler.source>
+		<maven.compiler.target>1.11</maven.compiler.target>
+	</properties>
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.hazelcast.jet/hazelcast-jet -->
 		<dependency>
