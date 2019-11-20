@@ -10,6 +10,6 @@ In this example we use H2O's MOJO model type to execute locally in the Jet run t
 
 Building the MOJO
 
-You will find a pre-built MOJO in the 'bin' directory of this repository. For further exploration, they python file used to build the included MOJO is found in the same directory. H2O MOJO's are packaged in 'zip' format and should be left in this state. It can be unzipped to explore the model details however.
+You will find a pre-built MOJO in the 'bin' directory of this repository. For further exploration, they python file used to build the included MOJO is found in the same directory. H2O MOJO's are packaged in 'zip' format and should be left in this state. It can be unzipped to explore the model details if desired.
 
 
