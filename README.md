@@ -20,6 +20,13 @@ If using a model located other than the 'bin' directory, the constant needs to b
 
 ##Running the Example
 
+    mvn exec:java -Dexec.mainClass="com.hazelcast.jet.h2o.JetIrisExample"
+    
+##Running the Data Generator
+
+    mvn exec:java -Dexec.mainClass="com.hazelcast.jet.h2o.model.iris.DataGenerator"
+    
+
 
 
 
