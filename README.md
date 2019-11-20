@@ -12,4 +12,12 @@ Building the MOJO
 
 You will find a pre-built MOJO in the 'bin' directory of this repository. For further exploration, they python file used to build the included MOJO is found in the same directory. H2O MOJO's are packaged in 'zip' format and should be left in this state. It can be unzipped to explore the model details if desired.
 
+Note: The class: JetIrisExample contains the main method to run the example. This class has a constant:
+
+    private static String FQ_MODEL_FILE = "./bin/DeepLearning_Model.zip";
+    
+If using a model located other than the 'bin' directory, the constant needs to be updated to the correct path.
+
+
+
 
