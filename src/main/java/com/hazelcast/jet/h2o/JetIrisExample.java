@@ -24,7 +24,9 @@ import hex.genmodel.easy.EasyPredictModelWrapper;
 public class JetIrisExample {
 	
 	private static String SOURCE_MAP_NAME = "testMap";
-	private static String FQ_MODEL_FILE = "/tmp/DeepLearning_model_python_1573778406631_1.zip";
+	//private static String FQ_MODEL_FILE = "/tmp/DeepLearning_model_python_1573778406631_1.zip";
+	private static String FQ_MODEL_FILE = "./bin/DeepLearning_Model.zip";
+	
 
 	public static void main(String[] args) {
 		System.setProperty("hazelcast.logging.type", "log4j");

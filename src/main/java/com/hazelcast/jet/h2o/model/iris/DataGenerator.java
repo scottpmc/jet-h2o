@@ -10,7 +10,7 @@ public class DataGenerator {
 	
 	//This needs an Iris data file
 	//See: https://archive.ics.uci.edu/ml/datasets/iris
-	private static String IRIS_DATA_FILE = "/tmp/iris.data";
+	private static String IRIS_DATA_FILE = "./bin/iris.data";
 	
 	//This needs to match the map name the pipeline is looking for
 	private static String SOURCE_MAP_NAME = "testMap";
