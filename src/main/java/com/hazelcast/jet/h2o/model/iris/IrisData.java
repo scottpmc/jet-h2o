@@ -38,8 +38,8 @@ public class IrisData {
 	}
 	
 	public IrisDefinition getRandomIris() {
+		//Test
 		return irisData.get(rand.nextInt(arraySize));
-		
 	}
 
 }
