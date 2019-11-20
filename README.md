@@ -20,11 +20,36 @@ If using a model located other than the 'bin' directory, the constant needs to b
 
 ## Running the Example
 
+This example has 2 independent running parts: The Jet process that consumes messages and invokes the H2O Deep Learning model, and a data generator that publishes random data instances for the Jet process to consume. For simplicity, a Hazelcast Map with an event journal is used.
+
+Compile the example with Maven:
+
+    $ mvn clean package
+    
+And then run the Jet consumer with:
+
     mvn exec:java -Dexec.mainClass="com.hazelcast.jet.h2o.JetIrisExample"
     
-## Running the Data Generator
+This creates a Jet instance and configures the necessary Map and Journal components for the generator to connect to.
+    
+Once the Jet instance is up, run the generator with:
 
     mvn exec:java -Dexec.mainClass="com.hazelcast.jet.h2o.model.iris.DataGenerator"
+    
+Note: The DataGenerator class relies on the constant:
+
+    private static String IRIS_DATA_FILE = "./bin/iris.data";
+    
+as the source of Iris data points. If using a different data source file, this constant need to be updated to the correct path.
+
+Once both are running, observed output should similar to;
+
+    06:14,937 [192.168.1.109]:5701 [jet] [3.2] Match: A: Iris-versicolor     P: Iris-versicolor     2.0955834684188753E-7    0.9999706883800461       2.9102061607096872E-5    
+    06:15,041 [192.168.1.109]:5701 [jet] [3.2] Match: A: Iris-versicolor     P: Iris-versicolor     5.610579151736111E-6     0.9997230126546157       2.7137676623249313E-4    
+    06:15,147 [192.168.1.109]:5701 [jet] [3.2] Match: A: Iris-setosa         P: Iris-setosa         0.9999999753770564       2.462294346114491E-8     1.3031347700520356E-23   
+    06:15,249 [192.168.1.109]:5701 [jet] [3.2] Match: A: Iris-virginica      P: Iris-virginica      1.1965838286945377E-12   0.009540653606585582     0.9904593463922179       
+    06:15,355 [192.168.1.109]:5701 [jet] [3.2] Match: A: Iris-virginica      P: Iris-virginica      5.1397645372094E-14      6.324490814564425E-4     0.9993675509184922       
+    06:15,455 [192.168.1.109]:5701 [jet] [3.2] Match: A: Iris-virginica      P: Iris-virginica      5.515384584643081E-12    0.09150538508504653      0.9084946149094381  
     
 
 
