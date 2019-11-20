@@ -51,7 +51,7 @@ Once both are running, observed output should similar to;
     06:15,355 [192.168.1.109]:5701 [jet] [3.2] Match: A: Iris-virginica      P: Iris-virginica      5.1397645372094E-14      6.324490814564425E-4     0.9993675509184922       
     06:15,455 [192.168.1.109]:5701 [jet] [3.2] Match: A: Iris-virginica      P: Iris-virginica      5.515384584643081E-12    0.09150538508504653      0.9084946149094381  
     
-
+This output indicates that Jet is consuming the Iris data points, invoking the H2O Deep Learning model, and receiving the Iris type prediction. The Iris data point contains the correct type for comparison of the prediction (A: Actual and P: Predicted). Jet compares the Actual to Predicted types and prints Match or Miss. The trailing decimal numbers indicate the models statistical evaluation of the data point for each Iris type. 
 
 
 
