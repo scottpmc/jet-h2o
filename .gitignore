@@ -118,7 +118,9 @@ local.properties
 *.war
 *.nar
 *.ear
-*.zip
+
+#Allowing the MOJO zip file
+#*.zip
 *.tar.gz
 *.rar
 
