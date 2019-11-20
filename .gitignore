@@ -14,9 +14,11 @@
 # Created by https://www.gitignore.io/api/git,java,maven,eclipse,windows
 
 ### Eclipse ###
-
 .metadata
-bin/
+
+#including bin directory in this repo
+#bin/
+
 tmp/
 *.tmp
 *.bak
