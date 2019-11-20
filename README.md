@@ -1,4 +1,4 @@
-#Example of using Hazelcast Jet to operationalize an H2O ML Data Model
+# Example of using Hazelcast Jet to operationalize an H2O ML Data Model
 
 [H2O](https://www.h2o.ai) is a leading platform for building, training, and executing machine learning data models and algorithms.
 
@@ -8,7 +8,7 @@ This repository is an example of enabling H2O data models for use in real-time s
 
 In this example we use H2O's MOJO model type to execute locally in the Jet run time. We create an H2O Deep Learning model, train it with a well known sample data set [(Iris)](https://en.wikipedia.org/wiki/Iris_flower_data_set) commonly used to prove statistical classification, export the model to a MOJO and incorporate the MOJO into a Jet Pipeline.
 
-##Building the MOJO
+## Building the MOJO
 
 You will find a pre-built MOJO in the 'bin' directory of this repository. For further exploration, they python file used to build the included MOJO is found in the same directory. H2O MOJO's are packaged in 'zip' format and should be left in this state. It can be unzipped to explore the model details if desired.
 
@@ -18,11 +18,11 @@ Note: The class: JetIrisExample contains the main method to run the example. Thi
     
 If using a model located other than the 'bin' directory, the constant needs to be updated to the correct path.
 
-##Running the Example
+## Running the Example
 
     mvn exec:java -Dexec.mainClass="com.hazelcast.jet.h2o.JetIrisExample"
     
-##Running the Data Generator
+## Running the Data Generator
 
     mvn exec:java -Dexec.mainClass="com.hazelcast.jet.h2o.model.iris.DataGenerator"
     
